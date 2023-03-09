@@ -1,6 +1,6 @@
 {
   "name": "tobenski-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tobenski/tobenski-react-ribbon.git"
+    "url": "git+https://github.com/tobenski/tobenski-react.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tobenski/tobenski-react-ribbon/issues"
+    "url": "https://github.com/tobenski/tobenski-react/issues"
   },
-  "homepage": "https://github.com/tobenski/tobenski-react-ribbon#readme",
+  "homepage": "https://github.com/tobenski/tobenski-react#readme",
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/styled-components": "^5.1.26",

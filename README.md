@@ -1,6 +1,6 @@
 # Tobenski React Components
 
-This is Tobenski's React Components. Mostly for internal use.
+This is Tobenski's React Components.
 
 ## Install
 
@@ -16,8 +16,8 @@ import { Ribbon } from "tobenski-react"
 
 ## Contributing
 
-PRs accepted.
+
 
 ## License
 
-MIT © Richard McRichface
+MIT © Knud Rishøj
