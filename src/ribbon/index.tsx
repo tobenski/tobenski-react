@@ -7,12 +7,12 @@ export type positionType =
     | "BottomLeft"
     | "BottomRight";
 
-
 export interface iRibbon {
     show?: boolean,
     position?: positionType,
     bgColor?: string,
     textColor?: string,
+    size: number,
 }
 
 export interface ribbonType extends iRibbon {
@@ -25,12 +25,15 @@ export function Ribbon(
         position = 'TopLeft',
         bgColor = 'yellow',
         textColor = '#000',
+        size = 5,
         children
     } : ribbonType
 ) {
     return (
-        <StyledRibbon show={show} position={position} bgColor={bgColor} textColor={textColor}>
+        <StyledRibbon show={show} position={position} bgColor={bgColor} textColor={textColor} size={size}>
             <span><p>{children}</p></span>
         </StyledRibbon>
     )
 }
+
+export default Ribbon

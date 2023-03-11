@@ -12,12 +12,12 @@ npm install tobenski-react
 
 ```
 import { Ribbon } from "tobenski-react"
+<Ribbon show size={5} position='TopLeft' bgColor='yellow' textColor='white'>Test</Ribbon>
 ```
 
-## Contributing
+Parent Container must be:
+```
+Posistion: relative;
+```
 
 
-
-## License
-
-MIT © Knud Rishøj
