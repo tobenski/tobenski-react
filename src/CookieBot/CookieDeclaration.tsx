@@ -1,5 +1,4 @@
 'use client'
-
 export default function CookieDeclaration(
     {
         domainGroupId,
@@ -7,16 +6,14 @@ export default function CookieDeclaration(
         id,
     } : {
         domainGroupId: string,
-        language?: string | 'da',
+        language?: string,
         id: string,
     } 
 ) {
-    if (typeof window === 'undefined') {
-        console.log('no Widow');        
+    if (typeof window === 'undefined') {  
         return null;
       }
     if (!domainGroupId || !document) {
-        console.log('no ID or document');        
         return null;
     }
     if (domainGroupId.length !== 36) {
@@ -29,6 +26,7 @@ export default function CookieDeclaration(
     script.setAttribute('id', 'CookieDeclaration');
     script.setAttribute('src', `https://consent.cookiebot.com/${domainGroupId}/cd.js`);
     script.setAttribute('type', 'text/javascript');
+    script.async = true
     language && script.setAttribute('data-culture', language);
     const insertPosition = document.getElementById(id);
     insertPosition?.insertBefore(script, insertPosition.firstChild);

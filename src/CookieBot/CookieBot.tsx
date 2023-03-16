@@ -1,18 +1,16 @@
 'use client'
-import React from 'react';
 
 export default function CookieBot({
   domainGroupId,
   language,
-  WidgetEnabled, //data-widget-enabled
-  WidgetPosition, //data-widget-position
+  WidgetEnabled,
+  WidgetPosition,
 }: {
     domainGroupId: string,
     language: string,
     WidgetEnabled?: boolean,
     WidgetPosition?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | undefined,
 }) {
-  /* istanbul ignore next */
   if (typeof window === 'undefined') {
     return null;
   }
@@ -38,27 +36,6 @@ export default function CookieBot({
   }
   const head = document.querySelector('html > head');  
  head?.insertBefore(script, head.firstChild);
-  return (
-  <>
-    {/* <script
-        id="CookieBot"
-        src="https://consent.cookiebot.com/uc.js"
-        data-cbid={domainGroupId}
-        data-blockingmode='auto'
-        type='text/javascript'
-        data-widget-enabled={WidgetEnabled ? 'true' : 'false'}
-        data-widget-posistion={WidgetPosition || 'top-left'}
-        data-culture={language || 'da'}
-        async
-        /> */}
-     {/* <script
-       id="CookieDeclaration"
-       src={`https://consent.cookiebot.com/${domainGroupId}/cd.js`}
-       type="text/javascript"
-       data-culture={language}
-       async
-     /> */}
-    </>
-  );
+  return null;
 }
 
